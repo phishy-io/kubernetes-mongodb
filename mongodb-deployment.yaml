@@ -2,22 +2,23 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-    app: mongo
-  name: mongo
+    app: phishy-mongodb-2
+  name: phishy-mongodb-2
+  namespace: phishy
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: mongo
+      app: phishy-mongodb-2
   strategy: {}
   template:
     metadata:
       labels:
-        app: mongo
+        app: phishy-mongodb-2
     spec:
       containers:
       - image: mongo
-        name: mongo
+        name: phishy-mongodb-2
         args: ["--dbpath","/data/db"]
         livenessProbe:
           exec:

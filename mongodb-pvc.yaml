@@ -2,9 +2,10 @@ apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
   name: mongo-data
+  namespace: phishy
 spec:
   accessModes:
     - ReadWriteOnce 
   resources:
     requests:
-      storage: 1Gi
+      storage: 8Gi
