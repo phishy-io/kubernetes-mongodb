@@ -10,7 +10,7 @@ spec:
   - port: 27018
     protocol: TCP
     targetPort: 27017
-    nodePort: 33000
+    nodePort: 32700
   selector:
     app: phishy-mongodb-2
   type: NodePort
